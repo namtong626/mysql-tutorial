@@ -1,0 +1,116 @@
+1. Write a SQL statement to insert a record with your own value into the table countries against each columns.
+
+Here in the following is the structure of the table countries.
+
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+| COUNTRY_ID   | varchar(2)    | YES  |     | NULL    |       |
+| COUNTRY_NAME | varchar(40)   | YES  |     | NULL    |       |
+| REGION_ID    | decimal(10,0) | YES  |     | NULL    |       |
++--------------+---------------+------+-----+---------+-------+	
+
+2. Write a SQL statement to insert one row into the table countries against the column country_id and country_name.
+
+Here in the following is the structure of the table countries.
+
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+| COUNTRY_ID   | varchar(2)    | YES  |     | NULL    |       |
+| COUNTRY_NAME | varchar(40)   | YES  |     | NULL    |       |
+| REGION_ID    | decimal(10,0) | YES  |     | NULL    |       |
++--------------+---------------+------+-----+---------+-------+	
+
+3. Write a SQL statement to create duplicate of countries table named country_new with all structure and data.
+
+Here in the following is the structure of the table countries.
+
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+| COUNTRY_ID   | varchar(2)    | YES  |     | NULL    |       |
+| COUNTRY_NAME | varchar(40)   | YES  |     | NULL    |       |
+| REGION_ID    | decimal(10,0) | YES  |     | NULL    |       |
++--------------+---------------+------+-----+---------+-------+	
+
+4. Write a SQL statement to insert NULL values against region_id column for a row of countries table.
+
+
+5. Write a SQL statement to insert 3 rows by a single insert statement.
+
+
+6. Write a SQL statement insert rows from country_new table to countries table.
+
+Here is the rows for country_new table. Assume that, the countries table is empty.
+
++------------+--------------+-----------+
+| COUNTRY_ID | COUNTRY_NAME | REGION_ID |
++------------+--------------+-----------+
+| C0001      | India        |      1001 |
+| C0002      | USA          |      1007 |
+| C0003      | UK           |      1003 |
++------------+--------------+-----------+
+
+7. Write a SQL statement to insert one row in jobs table to ensure that no duplicate value will be entered in the job_id column.
+
+
+8. Write a SQL statement to insert one row in jobs table to ensure that no duplicate value will be entered in the job_id column.
+
+
+9. Write a SQL statement to insert a record into the table countries to ensure that, a country_id and region_id combination will be entered once in the table.
+
+
+10. Write a SQL statement to insert rows into the table countries in which the value of country_id column will be unique and auto incremented.
+
+
+11. Write a SQL statement to insert records into the table countries to ensure that the country_id column will not contain any duplicate data and this will be automatically incremented and the column country_name will be filled up by 'N/A' if no value assigned for that column.
+
+
+12. Write a SQL statement to insert rows in the job_history table in which one column job_id is containing those values which are exists in job_id column of jobs table.
+
+
+13. Write a SQL statement to insert rows into the table employees in which a set of columns department_id and manager_id contains a unique value and that combined values must have exists into the table departments.
+
+
+14. Write a SQL statement to insert rows into the table employees in which a set of columns department_id and job_id contains the values which must have exists into the table departments and jobs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Đáp án:
+
+1. INSERT INTO countries VALUES('C1','India',1001);
+2. INSERT INTO countries (country_id,country_name) VALUES('C1','India');
+3. CREATE TABLE IF NOT EXISTS country_new
+   AS SELECT * FROM countries;
+4. INSERT INTO countries (country_id,country_name,region_id) VALUES('C1','India',NULL);
+5. INSERT INTO countries VALUES('C0001','India',1001),
+   ('C0002','USA',1007),('C0003','UK',1003);
+6. INSERT INTO countries
+   SELECT * FROM country_new;
+7. INSERT INTO jobs VALUES(1001,'OFFICER',8000);
+8. INSERT INTO jobs VALUES(1001,'OFFICER',8000);
+9. INSERT INTO countries VALUES(501,'Italy',185);
+10. INSERT INTO countries(COUNTRY_NAME,REGION_ID) VALUES('India',185);
+INSERT INTO countries(COUNTRY_NAME,REGION_ID) VALUES('Japan',102);
+11. INSERT INTO countries VALUES(501,'India',102);
+INSERT INTO countries(region_id) VALUES(109);
+INSERT INTO countries(country_name,region_id) VALUES('Australia',121);
+12. INSERT INTO job_history VALUES(501,1001,60);
+INSERT INTO job_history VALUES(502,1003,80);
+13. INSERT INTO employees VALUES(510,'Alex','Hanes','CLERK',18000,201,60);
+    INSERT INTO employees VALUES(511,'Kim','Leon','CLERK',18000,211,80);
+    INSERT INTO employees VALUES(512,'Kim','Leon','CLERK',18000,80,211);
+
+14. INSERT INTO employees VALUES(510,'Alex','Hanes',60,1001,18000);
+INSERT INTO employees VALUES(511,'Tom','Elan',60,1003,22000);

@@ -1,6 +1,0 @@
-Bài 1: Tạo 1 database `magazine_db` bao gồm các bảng
- - users (id, username, password, fullname, gender, phone, dob, created_at, updated_at, deleted_at)
- - categories (id, title, avatar, created_by, created_at, updated_at, deleted_at)
- - posts (id, category_id, avatar, title, summary, description, , created_by, created_at, updated_at, deleted_at)
- - advantages (id, post_id, avatar, content)
-
