@@ -8,3 +8,8 @@
 8. tính tổng số lương dc lưu trong hệ thống
 9 . Tính số lương trugn bình của nhân viên làm ở DEPARTMENT_ID = 80
 10. đếm số lượng nhân viên làm cùng 1 job
+
+
+11. lấy tên deparment và số lượng nv làm ở bộ phận đó
+12. hiển thị bộ phận và tên người quản lý bộ phận đó
+13. hiển thị deparment name, manager name,  city
