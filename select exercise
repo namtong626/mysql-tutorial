@@ -4,5 +4,7 @@
 4. tìm người lương cao nhất
 5. đếm chiều dài tên fullname của mỗi người (số kí tự của tên )
 6. lấy ra 10 records đầu tiên với điều kiện lương > 10k hoặc < 2k có MANAGE_ID > 100
-
-
+7. lấy ra số lượng công việc  đang lưu trong bảng employees
+8. tính tổng số lương dc lưu trong hệ thống
+9 . Tính số lương trugn bình của nhân viên làm ở DEPARTMENT_ID = 80
+10. đếm số lượng nhân viên làm cùng 1 job
