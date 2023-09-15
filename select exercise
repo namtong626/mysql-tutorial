@@ -1,0 +1,8 @@
+1. lấy toàn bộ tên của nhân viên và id của họ nhóm theo fullname và hiển thị ra màn hình
+2. lấy toàn bộ bảng employees  sắp xếp full name tăng dần
+3. tỉnh tổng số hoa hồng của mỗi nguời  theo lương và hiển thị tên fullname cùng tổng hoa hồng + lương
+4. tìm người lương cao nhất
+5. đếm chiều dài tên fullname của mỗi người (số kí tự của tên )
+6. lấy ra 10 records đầu tiên với điều kiện lương > 10k hoặc < 2k có MANAGE_ID > 100
+
+
